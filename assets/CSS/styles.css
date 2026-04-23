@@ -8,7 +8,8 @@
     --color-background: #ffffff;
     --color-background-alt: ;
     --color-border: ;
-    --color-text-accent: ;
+    --color-text: #000000;
+    --color-accent: #ff0000;
 
     /* Typograhy */
     --font-headings: 'Anton SC', Arial, sans-serif;
@@ -129,28 +130,28 @@ button {
 .section-intro {
     text-align: center;
     margin-bottom: var(--space-xl);
-    color: var(--color-surface);
+    color: var(--color-text);
 }
 
 .section-label {
     font-size: var(--font-size-label);
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--main-color);
+    color: var(--color-text);
     margin-bottom: var(--space-xs);
 }
 
 .section-heading {
     font-size: var(--font-size-section);
     font-weight: 700;
-    color: var(--color-heading);
+    color: var(--color-text);
     margin-bottom: var(--space-xl);
 }
 
 .section-link {
     display: inline-block;
     background-color: var(--main-color);
-    color: var(--color-background);
+    color: var(--color-text);
     padding: 10px 26px;
     border: 2px solid transparent;
     border-radius: var(--radius-pill);
@@ -205,7 +206,7 @@ button {
     flex-wrap: wrap;
     gap: 5px;
     background-color: var(--color-background);
-    color: var(--color-background-alt);
+    color: var(--color-text);
     padding: 10px 40px;
     text-align: center;
     position: fixed;
@@ -217,7 +218,7 @@ button {
 
 .page-header .nav-logo {
     font-family: var(--font-headings);
-    color: var(--color-background-alt);
+    color: var(--color-text);
     font-size: 1.3rem;
     text-transform: uppercase;
     font-weight: 700;
@@ -240,17 +241,17 @@ button {
     text-decoration: none;
     position: relative;
     /* margin: 0 12px; */
-    color: var(--color-background-alt);
+    color: var(--color-text);
     font-size: var(--font-size-body);
     font-family: var(--font-body);
 }
 
 .page-header .main-nav .active {
-    color: var(--color-background-alt);
+    color: var(--color-text);
 }
 
 .page-header .main-nav .nav-link:hover {
-    color: var(--color-text-accent);
+    color: var(--color-accent);
     /* text-decoration: underline; */
 }
 
@@ -313,6 +314,60 @@ button {
 }
 
 /* ==============================================
+   HERO SECTION
+   ============================================== */
+.hero-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--grid-gap-md);
+    position: relative;
+    background-color: var(--color-background);
+    overflow: hidden;
+    width: 100%;
+}
+
+
+
+.hero-section .hero-content {
+    display: flex;
+    gap: var(--grid-gap-sm);
+    margin-left: 30px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    width: 55%;
+    z-index: 2;
+    top: 6px;
+}
+
+.hero-section .hero-content .hero-label {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 35px;
+    margin-left: 10px;
+    color: var(--main-color);
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+
+    white-space: nowrap;
+    animation: fadeInUp 0.8s ease 0.3s both;
+}
+
+
+.hero-section .hero-content .hero-title {
+    font-family: var(--font-headings);
+    font-size: 120px;
+    font-weight: 500;
+    margin-left: 500px;
+    margin-top: 555px;
+    color: var(--main-color);
+    margin-bottom: 20px;
+    animation: fadeInUp 0.8s ease forwards;
+    white-space: nowrap;
+}
+
+
+/* ==============================================
    ABOUT SECTION
    ============================================== */
 .about-section {
@@ -326,19 +381,20 @@ button {
 .about-section .about-heading {
     font-size: var(--font-size-section);
     font-family: var(--font-headings);
-    color: var(--color-heading);
+    color: var(--color-text);
     font-weight: 800;
     line-height: 1.2;
+    margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
 }
 
 .about-section .about-description {
     font-size: 1.05rem;
-    max-width: 58ch;
+    max-width: 70ch;
     text-align: center;
     line-height: 1.7;
-    color: var(--color-background-alt);
+    color: var(--color-text);
 }
 
 
@@ -347,11 +403,16 @@ button {
     margin-top: var(--space-xl);
 }
 
-/* ==============================================
-   TEAM SECTION
-   ============================================== */
+.about-section img[alt="Meagan Dietert taking film photos"] {
+    border: 3px solid black;
+    animation: fadeInUp 0.8s ease forwards;
+}
 
-.team-section {
+
+/* ==============================================
+   SKILLS SECTION
+   ============================================== */
+.skills-section {
     padding: var(--section-padding);
     background-color: var(--color-background);
     display: flex;
@@ -359,68 +420,107 @@ button {
     align-items: center;
 }
 
-
-.team-title {
-    text-align: center;
-    font-size: var(--font-size-hero);
-    color: var(--color-background-alt);
-}
-
-.team-heading {
+.skills-section .skills-heading {
     font-size: var(--font-size-section);
     font-family: var(--font-headings);
-    color: var(--color-background-alt);
-    font-weight: 1000;
+    color: var(--color-heading);
+    font-weight: 800;
     line-height: 1.2;
     margin-bottom: 20px;
     text-align: center;
 }
 
-.position-heading {
+.skills-section .skills-description {
+    font-size: 1.05rem;
+    max-width: 70ch;
     text-align: center;
-    color: var(--color-background-alt);
+    line-height: 1.7;
+    color: var(--color-text);
 }
 
-.team-image {
-    height: 500px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 515px;
-    border: 3px solid var(--color-text-accent);
+.skills-section .skills-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--grid-gap-md);
+    max-width: var(--max-width-content);
+    width: 100%;
+    margin-top: var(--space-xl);
+
 }
 
-.team-image:hover {
-    background-color: #002aff;
-    color: var(--color-background);
-    border-color: #002aff;
+.skills-section .skill-box {
+    border: 1px solid var(--color-background);
+    border-radius: var(--radius-md);
+    padding: 24px 8px;
+    text-align: center;
+    background-color: var(--color-background);
+    box-shadow: var(--shadow-card);
+    animation: fadeInUp 0.6s ease both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+
+}
+
+.skills-section .skill-box:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.team-description {
-    font-size: 1.05rem;
-    max-width: 500px;
-    margin-left: 515px;
-    text-align: center;
-    line-height: 1.7;
-    color: var(--color-background-alt);
+.skill-logo {
+    font-family: var(--font-headings);
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-heading);
+    line-height: 1;
 }
 
-.team-contact {
-    font-size: .8rem;
-    max-width: 500px;
-    margin-top: 30px;
-    margin-left: 515px;
-    text-align: center;
-    line-height: 1.7;
-    color: var(--color-background-alt);
+.skill-label {
+    font-family: var(--font-headings);
+    font-size: var(--font-size-card-title);
+    margin-top: var(--space-xs);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
+
+.section-link-wrap {
+    text-align: center;
+    margin-top: var(--space-xl);
+}
+
+/* ==============================================
+   GALLERY SECTION
+      ==============================================*/
+.gallery-section {
+    padding: var(--section-padding);
+    background-color: var(--color-background);
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.gallery img {
+    width: auto;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 2px;
+    animation: zoomIn 0.6s ease both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+
 
 /* ==============================================
    FOOTER AREA
 ============================================== */
 .page-footer {
     background-color: var(--color-background);
-    color: var(--color-background);
+    color: var(--color-text);
     padding: 60px 40px 30px;
 }
 
@@ -434,20 +534,21 @@ button {
 
 .footer-brand {
     font-family: var(--font-headings);
-    color: var(--color-background-alt);
+    color: var(--color-text);
     font-weight: 700;
     letter-spacing: 2px;
     margin-bottom: var(--space-sm);
 }
 
 .footer-tagline {
-    color: var(--color-background-alt);
+    color: var(--color-text);
     font-size: 0.8rem;
+    padding-bottom: .8rem;
 }
 
 .footer-col-title {
     font-family: var(--font-headings);
-    color: var(--color-background-alt);
+    color: var(--color-text);
     font-weight: 700;
     margin-bottom: 1rem;
     text-transform: uppercase
@@ -457,14 +558,14 @@ button {
     display: block;
     margin-bottom: 1rem;
     padding-left: 0;
-    color: var(--color-background-alt);
+    color: var(--color-text);
     transition: padding-left var(--transition-base),
         color var(--transition-base);
 }
 
 .footer-link:hover {
     padding-left: 8px;
-    color: var(--color-text-accent);
+    color: var(--color-accent);
 }
 
 .footer-social {
@@ -473,17 +574,17 @@ button {
 }
 
 .social-link {
-    color: var(--main-color);
+    color: var(--color-text);
     text-decoration: none;
+    font-size: 1.25rem;
     transition: color var(--transition-base),
         transform var(--transition-base),
         box-shadow var(--transition-base);
 }
 
 .social-link:hover {
-    color: var(--main-color);
+    color: var(--color-accent);
     transform: scale(1.3);
-    box-shadow: 0 0 12px rgba(240, 236, 47, 0.6);
 }
 
 
@@ -494,7 +595,7 @@ button {
 
 
 .footer-copy {
-    color: var(--color-background-alt);
+    color: var(--color-text);
     font-size: var(--font-size-meta);
 }
 
@@ -524,3 +625,106 @@ button {
     transform: translateY(-3px);
     box-shadow: 0 0 15px var(--color-text-accent);
 }
+
+/* ==============================================
+   CSS ANIMATIONS
+============================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==============================================
+   MEDIA QUERIES
+   ============================================== */
+/* DESKTOP FIRST */
+@media (max-width: 1024px) {}
+
+@media (max-width: 768px) {
+
+    /* Show hamburger, hide desktop nav */
+    .ham-btn {
+        display: flex;
+    }
+
+    .main-nav {
+        display: none !important;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        padding-top: var(--space-md);
+        order: 3;
+    }
+
+    .nav-dropdown {
+        position: static;
+    }
+
+    .dropdown-menu {
+        display: none;
+    }
+
+    .ham-checkbox:checked~.main-nav {
+        display: flex !important;
+    }
+
+    .nav-cta {
+        display: block;
+        text-align: center;
+        margin-top: var(--space-md);
+        width: 100%;
+        order: 4;
+    }
+
+
+    .hero-section {
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 3em;
+        padding: 80px 20px;
+    }
+
+    .page-header .main-nav {
+        /* flex-direction: column; */
+    }
+
+    .hero-section .hero-content {
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .about-section .stats-row,
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .hero-section .hero-content {
+        padding: 6em;
+    }
+}
+
+@media (max-width: 320px) {}
+
+/* MOBILE FIRST */
+@media (min-width: 480px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 1024px) {}
+
+@media (min-width: 1200px) {}
