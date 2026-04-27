@@ -509,10 +509,13 @@ button {
 
 .project-section .project-row {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--grid-gap-md);
     width: 100%;
     margin-top: var(--space-xl);
+    animation: fadeInUp 0.6s ease both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 
 }
 
@@ -534,7 +537,7 @@ button {
     font-size: var(--font-size-card-title);
     color: var(--color-text);
     margin-top: var(--space-xs);
-    text-align: right;       
+    text-align: center;       
     text-transform: uppercase;
     letter-spacing: 1px;
 
@@ -543,26 +546,27 @@ button {
 .project-section .project-description {
     font-family: var(--font-body);
     font-size: var(--font-size-small);
-    text-align: right; 
+    text-align: center; 
     line-height: 1.7;
     color: var(--color-text);
+    margin-bottom: 20px;
 
 }
 
 .project-section .webite-video {
     width: 100%;
-    max-width: 920px;
+    max-width: 720px;
     display: flex;
     flex-direction: column;
     padding-left: 75px;
     align-items: center;
     width: auto;
     object-fit: cover;
-    border-radius: 2px;
-    animation: zoomIn 0.6s ease both;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-background);
 }
+
+
 
 .project-link-wrap {
     text-align: center;
