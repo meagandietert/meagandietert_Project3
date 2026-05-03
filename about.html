@@ -6,26 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Meagan Dietert</title>
 
-    <!-- SEO MEAT TAGS -->
+    <!-- SEO META TAGS -->
     <meta name="description"
-        content="Meagan Dietert's portfolio encapsulates her physical and digital media work as well as her skills.">
+        content="Learn about Meagan Dietert, a multidisciplinary artist and Creative Media student at Texas Tech University specializing in photography, videography, and design.">
     <meta name="keywords"
-        content="creative mdeia, photography, visual storytelling, design, filmaking, Meagan Dietert, creative portfolio">
-    <meta name="author" content="Meagan Dietert Portfolio">
+        content="creative media, photography, visual storytelling, design, filmmaking, Meagan Dietert, creative portfolio">
+    <meta name="author" content="Meagan Dietert">
+    <link rel="canonical" href="https://meagandietert.github.io/about.html">
+
+    <!-- OPEN GRAPH TAGS -->
+    <meta property="og:title" content="About – Meagan Dietert">
+    <meta property="og:description"
+        content="Learn about Meagan Dietert, a multidisciplinary artist and Creative Media student at Texas Tech University.">
+    <meta property="og:image" content="https://meagandietert.github.io/frame-project/assets/images/frame-og.webp">
+    <meta property="og:url" content="https://meagandietert.github.io/about.html">
+    <meta property="og:type" content="website">
 
     <!-- TWITTER TAGS -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MEAGAN DIETERT Portfilio">
+    <meta name="twitter:title" content="About – Meagan Dietert">
     <meta name="twitter:description"
-        content="FRAME is a creative media magazine dedicated to visual storytelling. Discover photography, design, filmaking, and brand indentity stories from creators worldwide.">
-    <meta name="twitter:image" content="https://meagandietert.github.io/frame-project/assets/images/frane-og.webp">
+        content="Learn about Meagan Dietert, a multidisciplinary artist and Creative Media student at Texas Tech University.">
+    <meta name="twitter:image" content="https://meagandietert.github.io/frame-project/assets/images/frame-og.webp">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap"
         rel="stylesheet">
-    <!-- ICONs -->
+    <!-- ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -38,94 +51,90 @@
 
     <!-- HEADER -->
     <header class="page-header" role="banner">
-        <span class="nav-logo"></i> MD</span>
+        <span class="nav-logo">MD</span>
 
-        <input type="checkbox" id="ham-toggle" class="ham-checkbox">
-        <label for="ham-toggle" class="ham-btn" aria-label="Toggle naviagtion menu">
-            <span></span>
-            <span></span>
-            <span></span>
+        <input type="checkbox" id="ham-toggle" class="ham-checkbox" aria-hidden="true">
+        <label for="ham-toggle" class="ham-btn" aria-label="Toggle navigation menu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
         </label>
 
-        <nav class="main-nav" aria-label="Main naviagtion">
-            <a href="index.html" class="nav-link" aria-current="page">Home</a>
-            <a href="about.html" class="nav-link active">About</a>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link active" aria-current="page">About</a>
             <a href="projects.html" class="nav-link">Projects</a>
-            <a href="gallery.html" class="nav-link">Gallery</a>
             <a href="contact.html" class="nav-link">Contact</a>
         </nav>
     </header>
 
     <!-- ABOUT -->
     <section class="about-section" aria-labelledby="about-heading">
-        <img src="assets/photos/OrnateBorder.png" alt="Ornate Border" width="500" height="auto" loading="eager">
+        <img src="assets/photos/OrnateBorder.png" alt="Ornate decorative border" width="500" height="auto"
+            loading="eager">
         <img src="assets/photos/PhotographyBio.jpg" alt="Meagan Dietert taking film photos" width="600" height="auto"
             loading="eager">
-        <h2 class="about-heading" id="about-heading"><b>ABOUT</b></h2>
-        <p class="about-description"> Meagan Dietert is a 21-year-old student passionate about creative media and
+        <h1 class="about-heading" id="about-heading">ABOUT</h1>
+        <p class="about-description">Meagan Dietert is a 21-year-old student passionate about creative media and
             design.
-            Currently, she is studing Creative Media and Fashion Merchandising at Texas Tech University and is currently
+            Currently, she is studying Creative Media and Fashion Merchandising at Texas Tech University and is
+            currently
             based in Lubbock, Texas. <br><br> She is
-            a multi-disciplinary artist who enjoys working in photography, videography, digital composition, and textile
+            a multidisciplinary artist who enjoys working in photography, videography, digital composition, and textile
             art. Her work is largely centered around self-expression, a desire to connect with others, and the
-            inherently intertwined nature of politics and art. </p>
-
+            inherently intertwined nature of politics and art.</p>
     </section>
 
     <!-- SKILLS -->
     <section class="skills-section" aria-labelledby="skills-heading">
         <h2 class="skills-heading" id="skills-heading">SKILLS</h2>
         <p class="skills-description">Meagan has a deep passion for learning and dedicates herself to her work.
-            Her skills are not limited to: </p>
-        <div class="skills-row">
-            <div class="skill-box">
-                <p class="skill-logo"><i class="fa-brands fa-html5"></i></p>
+            Her skills are not limited to:</p>
+        <ul class="skills-row" role="list">
+            <li class="skill-box">
+                <p class="skill-logo" aria-hidden="true"><i class="fa-brands fa-html5"></i></p>
                 <p class="skill-label">HTML</p>
-            </div>
-            <div class="skill-box">
-                <p class="skill-logo"><i class="fa-brands fa-css3-alt"></i></p>
+            </li>
+            <li class="skill-box">
+                <p class="skill-logo" aria-hidden="true"><i class="fa-brands fa-css3-alt"></i></p>
                 <p class="skill-label">CSS</p>
-            </div>
-            <div class="skill-box">
-                <p class="skill-logo"><i class="fa-brands fa-figma"></i></p>
+            </li>
+            <li class="skill-box">
+                <p class="skill-logo" aria-hidden="true"><i class="fa-brands fa-figma"></i></p>
                 <p class="skill-label">Figma</p>
-            </div>
-            <div class="skill-box">
-                <p class="skill-logo"><i class="fa-solid fa-paintbrush"></i>
-                <p>
+            </li>
+            <li class="skill-box">
+                <p class="skill-logo" aria-hidden="true"><i class="fa-solid fa-paintbrush"></i></p>
                 <p class="skill-label">Adobe Illustrator</p>
-            </div>
-            <div class="skill-box">
-                <p class="skill-logo"><i class="fa-solid fa-photo-film"></i>
-                <p>
+            </li>
+            <li class="skill-box">
+                <p class="skill-logo" aria-hidden="true"><i class="fa-solid fa-photo-film"></i></p>
                 <p class="skill-label">Adobe Premiere</p>
-            </div>
-            <div class="skill-box">
-                <p class="skill-logo"><i class="fa-solid fa-camera"></i></p>
+            </li>
+            <li class="skill-box">
+                <p class="skill-logo" aria-hidden="true"><i class="fa-solid fa-camera"></i></p>
                 <p class="skill-label">Photography</p>
-            </div>
-            <div class="skill-box">
-                <p class="skill-logo"><i class="fa-solid fa-swatchbook"></i></p>
+            </li>
+            <li class="skill-box">
+                <p class="skill-logo" aria-hidden="true"><i class="fa-solid fa-swatchbook"></i></p>
                 <p class="skill-label">Production Design</p>
-            </div>
-
-            <div class="skill-box">
-                <p class="skill-logo"><i class="fa-solid fa-palette"></i></p>
+            </li>
+            <li class="skill-box">
+                <p class="skill-logo" aria-hidden="true"><i class="fa-solid fa-palette"></i></p>
                 <p class="skill-label">Creative Direction</p>
-            </div>
-            <div class="skill-box">
-                <p class="skill-logo"><i class="fa-solid fa-shirt"></i></p>
+            </li>
+            <li class="skill-box">
+                <p class="skill-logo" aria-hidden="true"><i class="fa-solid fa-shirt"></i></p>
                 <p class="skill-label">Textile Art</p>
-            </div>
-
-        </div>
+            </li>
+        </ul>
     </section>
 
     <!-- FOOTER -->
     <footer class="page-footer">
         <div class="footer-columns">
             <div class="footer-col">
-                <p class="footer-brand"></i> MEAGAN DIETERT</p>
+                <p class="footer-brand">MEAGAN DIETERT</p>
                 <p class="footer-tagline">swag to the max.</p>
                 <div class="footer-social">
                     <a href="https://www.instagram.com/meagan_dietert/" target="_blank" rel="noopener noreferrer"
@@ -138,19 +147,21 @@
                         class="social-link" aria-label="Follow on LinkedIn"><i class="fa-brands fa-linkedin"
                             aria-hidden="true"></i></a>
                     <a href="https://github.com/meagandietert" target="_blank" rel="noopener noreferrer"
-                        class="social-link" aria-label="Follow on Github"><i class="fa-brands fa-github"
+                        class="social-link" aria-label="Follow on GitHub"><i class="fa-brands fa-github"
                             aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="footer-col">
-                <p class="footer-col-title">Explore</p>
-                <nav class="footer-nav" aria-label="Explore links">
+                <h3 class="footer-col-title">Explore</h3>
+                <nav class="footer-nav" aria-label="Footer navigation">
                     <a href="index.html" class="footer-link">Home</a>
-                    <a href="about.html" class="footer-link active">About</a>
+                    <a href="about.html" class="footer-link active" aria-current="page">About</a>
                     <a href="projects.html" class="footer-link">Projects</a>
-                    <a href="gallery.html" class="footer-link">Gallery</a>
                     <a href="contact.html" class="footer-link">Contact</a>
                 </nav>
+            </div>
+            <div class="footer-col">
+                <img src="assets/photos/Signature.png" alt="Meagan Dietert signature" loading="lazy">
             </div>
         </div>
         <div class="footer-bottom">

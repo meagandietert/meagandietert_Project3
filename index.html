@@ -6,26 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Meagan Dietert</title>
 
-    <!-- SEO MEAT TAGS -->
+    <!-- SEO META TAGS -->
     <meta name="description"
         content="Meagan Dietert's portfolio encapsulates her physical and digital media work as well as her skills.">
     <meta name="keywords"
-        content="creative mdeia, photography, visual storytelling, design, filmaking, Meagan Dietert, creative portfolio">
-    <meta name="author" content="Meagan Dietert Portfolio">
+        content="creative media, photography, visual storytelling, design, filmmaking, Meagan Dietert, creative portfolio">
+    <meta name="author" content="Meagan Dietert">
+    <link rel="canonical" href="https://meagandietert.github.io/index.html">
+
+    <!-- OPEN GRAPH TAGS -->
+    <meta property="og:title" content="Meagan Dietert – Portfolio">
+    <meta property="og:description"
+        content="Meagan Dietert's portfolio encapsulates her physical and digital media work as well as her skills.">
+    <meta property="og:image" content="https://meagandietert.github.io/frame-project/assets/images/frame-og.webp">
+    <meta property="og:url" content="https://meagandietert.github.io/index.html">
+    <meta property="og:type" content="website">
 
     <!-- TWITTER TAGS -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MEAGAN DIETERT Portfilio">
+    <meta name="twitter:title" content="Meagan Dietert – Portfolio">
     <meta name="twitter:description"
-        content="FRAME is a creative media magazine dedicated to visual storytelling. Discover photography, design, filmaking, and brand indentity stories from creators worldwide.">
-    <meta name="twitter:image" content="https://meagandietert.github.io/frame-project/assets/images/frane-og.webp">
+        content="Meagan Dietert's portfolio encapsulates her physical and digital media work as well as her skills.">
+    <meta name="twitter:image" content="https://meagandietert.github.io/frame-project/assets/images/frame-og.webp">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap"
         rel="stylesheet">
-    <!-- ICONs -->
+    <!-- ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -38,41 +51,97 @@
 
     <!-- HEADER -->
     <header class="page-header" role="banner">
-        <span class="nav-logo"></i> MD</span>
+        <span class="nav-logo">MD</span>
 
-        <input type="checkbox" id="ham-toggle" class="ham-checkbox">
-        <label for="ham-toggle" class="ham-btn" aria-label="Toggle naviagtion menu">
-            <span></span>
-            <span></span>
-            <span></span>
+        <input type="checkbox" id="ham-toggle" class="ham-checkbox" aria-hidden="true">
+        <label for="ham-toggle" class="ham-btn" aria-label="Toggle navigation menu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
         </label>
 
-        <nav class="main-nav" aria-label="Main naviagtion">
+        <nav class="main-nav" aria-label="Main navigation">
             <a href="index.html" class="nav-link active" aria-current="page">Home</a>
             <a href="about.html" class="nav-link">About</a>
             <a href="projects.html" class="nav-link">Projects</a>
-            <a href="gallery.html" class="nav-link">Gallery</a>
             <a href="contact.html" class="nav-link">Contact</a>
         </nav>
     </header>
 
 
-    <!-- HERO  -->
-    <section class="hero-section" role="Hero banner">
+    <!-- HERO -->
+    <section class="hero-section" aria-label="Hero banner">
         <div class="hero-content">
             <p class="hero-label">Creative direction<br>Curation<br>Multidisciplinary
                 Artist<br>Photography<br>Videography<br>Web design<br>Writing</p>
+            <img src="assets/photos/Filetcap.jpg" alt="Meagan Dietert side profile" loading="eager">
             <h1 class="hero-title">MEAGAN DIETERT</h1>
         </div>
-
     </section>
 
+    <!-- GALLERY -->
+    <section id="look" class="gallery-section" aria-labelledby="gallery-heading">
+        <h2 id="gallery-heading" class="visually-hidden">Photo Gallery</h2>
+        <ul class="gallery" role="list">
+            <li>
+                <figure>
+                    <img src="assets/photos/GreenSilhouette.jpg" alt="Silhouette of a man illuminated in green light"
+                        loading="lazy">
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="assets/photos/StreetArt.jpg" alt="Juxtaposing street art in NYC" loading="lazy">
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="assets/photos/LightInstallation.jpg" alt="Light installation at MOMA" loading="lazy">
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="assets/photos/LOL.jpg" alt="Graffiti art in Austin" loading="lazy">
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="assets/photos/Disco.jpg" alt="Disco ball on film" loading="lazy">
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="assets/photos/Embroidery.jpg" alt="Embroidered leather journal" loading="lazy">
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="assets/photos/Momportrait.jpg" alt="Portrait of my mom in NYC" loading="lazy">
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="assets/photos/NYCskyline.jpg" alt="NYC skyline from Brooklyn Bridge" loading="lazy">
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="assets/photos/Skating.jpg" alt="Family skating" loading="lazy">
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="assets/photos/Weepingwillow.jpg" alt="Willow tree on film" loading="lazy">
+                </figure>
+            </li>
+        </ul>
+    </section>
 
     <!-- FOOTER -->
     <footer class="page-footer">
         <div class="footer-columns">
             <div class="footer-col">
-                <p class="footer-brand"></i> MEAGAN DIETERT</p>
+                <p class="footer-brand">MEAGAN DIETERT</p>
                 <p class="footer-tagline">swag to the max.</p>
                 <div class="footer-social">
                     <a href="https://www.instagram.com/meagan_dietert/" target="_blank" rel="noopener noreferrer"
@@ -85,19 +154,21 @@
                         class="social-link" aria-label="Follow on LinkedIn"><i class="fa-brands fa-linkedin"
                             aria-hidden="true"></i></a>
                     <a href="https://github.com/meagandietert" target="_blank" rel="noopener noreferrer"
-                        class="social-link" aria-label="Follow on Github"><i class="fa-brands fa-github"
+                        class="social-link" aria-label="Follow on GitHub"><i class="fa-brands fa-github"
                             aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="footer-col">
-                <p class="footer-col-title">Explore</p>
-                <nav class="footer-nav" aria-label="Explore links">
-                    <a href="index.html" class="footer-link active">Home</a>
+                <h3 class="footer-col-title">Explore</h3>
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="index.html" class="footer-link active" aria-current="page">Home</a>
                     <a href="about.html" class="footer-link">About</a>
                     <a href="projects.html" class="footer-link">Projects</a>
-                    <a href="gallery.html" class="footer-link">Gallery</a>
                     <a href="contact.html" class="footer-link">Contact</a>
                 </nav>
+            </div>
+            <div class="footer-col">
+                <img src="assets/photos/Signature.png" alt="Meagan Dietert signature" loading="lazy">
             </div>
         </div>
         <div class="footer-bottom">
