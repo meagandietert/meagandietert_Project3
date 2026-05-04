@@ -85,7 +85,8 @@
                     Web design<br>
                     Writing
                 </p>
-                <img src="assets/photos/Filetcap.jpg" alt="Meagan Dietert side profile" loading="eager">
+                <img src="assets/photos/Filetcap.jpg" alt="Meagan Dietert side profile" width="450" height="550"
+                    loading="eager" fetchpriority="high">
                 <h1 class="hero-title">MEAGAN DIETERT</h1>
             </div>
         </section>
@@ -111,7 +112,7 @@
                     </figure>
                 </li>
                 <li>
-                    <video class="gallery-video" autoplay loop muted playsinline preload="auto"
+                    <video class="gallery-video" autoplay loop muted playsinline preload="metadata" controls
                         aria-label="Video footage from Fredericksburg 2024">
                         <source src="assets/videos/Fredericksburg24.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -143,7 +144,7 @@
                     </figure>
                 </li>
                 <li>
-                    <video class="gallery-video" autoplay loop muted playsinline preload="auto"
+                    <video class="gallery-video" autoplay loop muted playsinline preload="metadata" controls
                         aria-label="Video footage from Ruidoso 2024">
                         <source src="assets/videos/Ruidoso24.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -176,7 +177,7 @@
                     </figure>
                 </li>
                 <li>
-                    <video class="gallery-video" autoplay loop muted playsinline preload="auto"
+                    <video class="gallery-video" autoplay loop muted playsinline preload="metadata" controls
                         aria-label="Video footage from Abernathy 2024">
                         <source src="assets/videos/Abernathy24.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -188,9 +189,7 @@
                     </figure>
                 </li>
             </ul>
-
-            <div id="fullView" class="overlay" role="dialog" aria-modal="true" aria-label="Full size image view"
-                hidden>
+            <div id="fullView" class="overlay" role="dialog" aria-modal="true" aria-label="Full size image view" hidden>
                 <button class="close-btn" id="closeOverlay" aria-label="Close full size image view">
                     <span aria-hidden="true">&times;</span>
                 </button>

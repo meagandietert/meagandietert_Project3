@@ -5,8 +5,6 @@ R#11894436
 https://meagandietert.github.io/meagandietert_Project3/
 github: meagandietert
 
-Coded a multi-page creative web portfolio. Contains home, about, project, and contact section. 
+Coded a multi-page creative web portfolio. Contains home, about, project, and contact section. All media is my own.
 
 Used Claude AI to debug and help with accessibility and section
-
-All media is my own

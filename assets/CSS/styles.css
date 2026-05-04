@@ -154,7 +154,7 @@ button {
     transition: top var(--transition-fast);
 }
 
-/* Becomes visible when focused by keyboard */
+
 .skip-link:focus {
     top: 1rem;
 }
@@ -209,13 +209,11 @@ button {
    ACCESSIBILITY – FOCUS STYLES
    ============================================== */
 
-
 *:focus-visible {
     outline: 3px solid var(--color-accent);
     outline-offset: 3px;
     border-radius: 2px;
 }
-
 
 *:focus:not(:focus-visible) {
     outline: none;
@@ -257,7 +255,6 @@ button {
     top: 0;
     z-index: 100;
 }
-
 
 .page-header .nav-logo {
     font-family: var(--font-headings);
@@ -458,6 +455,54 @@ button {
     animation-range: entry 0% cover 40%;
 }
 
+/* ==============================================
+   GALLERY OVERLAY 
+   ============================================== */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+
+.overlay[hidden] {
+    display: none;
+}
+
+.overlay #fullImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2.5rem;
+    color: #ffffff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+    transition: color var(--transition-fast);
+}
+
+.close-btn:hover {
+    color: var(--color-accent);
+}
+
+.close-btn:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
 
 /* ==============================================
    ABOUT SECTION
@@ -646,7 +691,6 @@ button {
     font-style: italic;
 }
 
-
 .project-section .project-essay {
     text-align: left;
     max-width: 70ch;
@@ -824,11 +868,10 @@ button {
     font-size: var(--font-size-meta);
 }
 
+
 .footer-col img[alt="Meagan Dietert's handwritten signature"] {
-    position: absolute;
-    max-width: 500px;
-    margin-left: 50px;
-    margin-bottom: 500px;
+    max-width: 280px;
+    height: auto;
 }
 
 /* ==============================================
@@ -848,11 +891,86 @@ button {
 
 /* ==============================================
    MEDIA QUERIES
-   ============================================== */
-@media (max-width: 1024px) {}
+   ==============================================
 
+/* ─── TABLET (≤1024px) ─────────────────────────── */
+@media (max-width: 1024px) {
+
+    /* Hero: drop the absolute positioning, scale the title down */
+    .hero-section {
+        padding: 60px 30px;
+    }
+
+    .hero-section .hero-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .hero-section .hero-content .hero-label {
+        white-space: normal;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .hero-section .hero-content .hero-title {
+        position: static;
+        left: auto;
+        bottom: auto;
+        font-size: clamp(2.5rem, 8vw, 5rem);
+        white-space: normal;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .hero-section img[alt="Meagan Dietert side profile"] {
+        width: auto;
+        max-width: 60%;
+        height: auto;
+        max-height: 480px;
+        margin: 0 auto;
+    }
+
+    /* About: scale down decorative + bio images */
+    .about-section img {
+        max-width: 90%;
+        height: auto;
+    }
+
+    /* Skills: 3 cols → 2 cols */
+    .skills-section .skills-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Footer: 4 cols → 2 cols */
+    .footer-columns {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-col img[alt="Meagan Dietert's handwritten signature"] {
+        position: static;
+        max-width: 240px;
+        margin: 0;
+    }
+
+    .gallery img,
+    .gallery-video {
+        height: 360px;
+    }
+}
+
+/* ─── MOBILE (≤768px) ───────────────────────────── */
 @media (max-width: 768px) {
 
+    /* Header */
+    .page-header {
+        padding: 10px 20px;
+    }
+
+    /* Hamburger nav */
     .ham-btn {
         display: flex;
     }
@@ -861,7 +979,7 @@ button {
         display: none !important;
         flex-direction: column;
         width: 100%;
-        gap: 0;
+        gap: 0.5rem;
         padding-top: var(--space-md);
         order: 3;
     }
@@ -870,48 +988,145 @@ button {
         display: flex !important;
     }
 
-    .nav-cta {
-        display: block;
-        text-align: center;
-        margin-top: var(--space-md);
-        width: 100%;
-        order: 4;
-    }
-
+    /* Hero */
     .hero-section {
         flex-direction: column;
-        justify-content: space-between;
-        gap: 3em;
-        padding: 80px 20px;
+        gap: 1.5rem;
+        padding: 50px 20px;
     }
 
     .hero-section .hero-content {
+        flex-direction: column;
+        align-items: center;
         text-align: center;
         width: 100%;
+        margin-left: 0;
+        gap: 1rem;
     }
 
-    .hero-buttons {
+    .hero-section .hero-content .hero-label {
+        font-size: 14px;
+        letter-spacing: 1.5px;
+        margin: 0 0 0.5rem;
+    }
+
+    .hero-section .hero-content .hero-title {
+        font-size: clamp(2.25rem, 11vw, 3.75rem);
+        margin: 0.5rem 0;
+    }
+
+    .hero-section img[alt="Meagan Dietert side profile"] {
+        max-width: 75%;
+        max-height: 380px;
+    }
+
+    /* Section padding tightens up */
+    .gallery-section,
+    .about-section,
+    .skills-section,
+    .project-section,
+    .contact-section {
+        padding: 50px 16px;
+    }
+
+    /* Gallery: 2-col-feeling grid via shorter heights */
+    .gallery img,
+    .gallery-video {
+        height: 280px;
+    }
+
+    /* Skills: → 2 cols */
+    .skills-section .skills-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--grid-gap-sm);
+    }
+
+    /* Projects: 2 cols → 1 col */
+    .project-section .project-row {
+        grid-template-columns: 1fr;
+    }
+
+    .project-section .project-box {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .project-section .filet-video,
+    .project-section .webite-video,
+    .project-section .tapestry-video {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Footer: → 1 col, centered */
+    .footer-columns {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer-social {
         justify-content: center;
     }
 
-    .about-section .stats-row,
-    .articles-grid {
+    .footer-col img[alt="Meagan Dietert's handwritten signature"] {
+        position: static;
+        max-width: 220px;
+        margin: 0 auto;
+    }
+
+    .page-footer {
+        padding: 40px 20px 20px;
+    }
+}
+
+/* ─── SMALL MOBILE (≤480px) ─────────────────────── */
+@media (max-width: 480px) {
+
+
+    .hero-section {
+        padding: 40px 16px;
+    }
+
+    .hero-section .hero-content {
+        padding: 0;
+    }
+
+    .hero-section .hero-content .hero-label {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    .hero-section .hero-content .hero-title {
+        font-size: clamp(2rem, 13vw, 3rem);
+    }
+
+    .hero-section img[alt="Meagan Dietert side profile"] {
+        max-width: 85%;
+        max-height: 320px;
+    }
+
+    .skills-section .skills-row {
         grid-template-columns: 1fr;
     }
-}
 
-@media (max-width: 480px) {
-    .hero-section .hero-content {
-        padding: 6em;
+    .gallery img,
+    .gallery-video {
+        height: 220px;
+    }
+
+    .about-section .about-heading,
+    .skills-section .skills-heading,
+    .project-section .project-heading,
+    .contact-section .contact-heading {
+        font-size: clamp(1.5rem, 8vw, 2rem);
+    }
+
+    .page-header {
+        padding: 10px 16px;
+    }
+
+    .page-header .nav-logo {
+        font-size: 1.1rem;
     }
 }
-
-@media (max-width: 320px) {}
-
-@media (min-width: 480px) {}
-
-@media (min-width: 768px) {}
-
-@media (min-width: 1024px) {}
-
-@media (min-width: 1200px) {}
