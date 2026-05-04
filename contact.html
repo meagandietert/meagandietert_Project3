@@ -48,18 +48,22 @@
 
 <body>
 
+    <!-- SKIP NAVIGATION -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <!-- HEADER -->
     <header class="page-header" role="banner">
-        <span class="nav-logo">MD</span>
+        <a href="index.html" class="nav-logo" aria-label="Meagan Dietert – Home">MD</a>
 
         <input type="checkbox" id="ham-toggle" class="ham-checkbox" aria-hidden="true">
-        <label for="ham-toggle" class="ham-btn" aria-label="Toggle navigation menu">
+        <label for="ham-toggle" class="ham-btn" aria-label="Toggle navigation menu" aria-expanded="false"
+            aria-controls="main-nav">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
         </label>
 
-        <nav class="main-nav" aria-label="Main navigation">
+        <nav id="main-nav" class="main-nav" aria-label="Main navigation">
             <a href="index.html" class="nav-link">Home</a>
             <a href="about.html" class="nav-link">About</a>
             <a href="projects.html" class="nav-link">Projects</a>
@@ -67,31 +71,39 @@
         </nav>
     </header>
 
+    <main id="main-content">
 
-    <!-- CONTACT -->
-    <section class="contact-section" aria-labelledby="contact-heading">
-        <img src="assets/photos/floralborder.png" alt="Decorative floral border" width="300" height="auto"
-            loading="eager">
-        <h1 class="contact-heading" id="contact-heading">CONTACT</h1>
-        <p class="contact-description">
-            Hey! What's up?<br>
-            Let's get in touch and work together!<br><br>
-            Email: <a href="mailto:meagandietert07@gmail.com">meagandietert07@gmail.com</a>
-        </p>
-        <div class="contact-social">
-            <a href="https://www.instagram.com/meagan_dietert/" target="_blank" rel="noopener noreferrer"
-                class="contact-link" aria-label="Follow on Instagram"><i class="fa-brands fa-instagram"
-                    aria-hidden="true"></i></a>
-            <a href="https://youtube.com/@meagandietert3275?si=tvLB80NZOdpGuXTE" target="_blank"
-                rel="noopener noreferrer" class="contact-link" aria-label="Follow on YouTube"><i
-                    class="fa-brands fa-youtube" aria-hidden="true"></i></a>
-            <a href="https://www.linkedin.com/in/meagan-dietert/" target="_blank" rel="noopener noreferrer"
-                class="contact-link" aria-label="Follow on LinkedIn"><i class="fa-brands fa-linkedin"
-                    aria-hidden="true"></i></a>
-            <a href="https://github.com/meagandietert" target="_blank" rel="noopener noreferrer" class="contact-link"
-                aria-label="Follow on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-        </div>
-    </section>
+        <!-- CONTACT -->
+        <section class="contact-section" aria-labelledby="contact-heading">
+            <img src="assets/photos/floralborder.png" alt="" role="presentation" width="300" loading="eager">
+            <h1 class="contact-heading" id="contact-heading">CONTACT</h1>
+            <address class="contact-description">
+                Hey! What's up?<br>
+                Let's get in touch and work together!<br><br>
+                Email: <a href="mailto:meagandietert07@gmail.com"
+                    aria-label="Send an email to Meagan at meagandietert07@gmail.com">meagandietert07@gmail.com</a><br>
+                <a href="assets/files/Resume - Dietert.pdf" download
+                    aria-label="Download Meagan Dietert's resume (PDF)">Download Resume (PDF)</a>
+            </address>
+            <div class="contact-social" role="list" aria-label="Social media links">
+                <a href="https://www.instagram.com/meagan_dietert/" target="_blank" rel="noopener noreferrer"
+                    class="contact-link" role="listitem" aria-label="Follow Meagan on Instagram (opens in new tab)"><i
+                        class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://youtube.com/@meagandietert3275?si=tvLB80NZOdpGuXTE" target="_blank"
+                    rel="noopener noreferrer" class="contact-link" role="listitem"
+                    aria-label="Follow Meagan on YouTube (opens in new tab)"><i class="fa-brands fa-youtube"
+                        aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/meagan-dietert/" target="_blank" rel="noopener noreferrer"
+                    class="contact-link" role="listitem"
+                    aria-label="Connect with Meagan on LinkedIn (opens in new tab)"><i class="fa-brands fa-linkedin"
+                        aria-hidden="true"></i></a>
+                <a href="https://github.com/meagandietert" target="_blank" rel="noopener noreferrer"
+                    class="contact-link" role="listitem" aria-label="View Meagan's GitHub profile (opens in new tab)"><i
+                        class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+        </section>
+
+    </main>
 
     <!-- FOOTER -->
     <footer class="page-footer">
@@ -101,21 +113,22 @@
                 <p class="footer-tagline">swag to the max.</p>
                 <div class="footer-social">
                     <a href="https://www.instagram.com/meagan_dietert/" target="_blank" rel="noopener noreferrer"
-                        class="social-link" aria-label="Follow on Instagram"><i class="fa-brands fa-instagram"
-                            aria-hidden="true"></i></a>
+                        class="social-link" aria-label="Follow Meagan on Instagram (opens in new tab)"><i
+                            class="fa-brands fa-instagram" aria-hidden="true"></i></a>
                     <a href="https://youtube.com/@meagandietert3275?si=tvLB80NZOdpGuXTE" target="_blank"
-                        rel="noopener noreferrer" class="social-link" aria-label="Follow on YouTube"><i
-                            class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+                        rel="noopener noreferrer" class="social-link"
+                        aria-label="Follow Meagan on YouTube (opens in new tab)"><i class="fa-brands fa-youtube"
+                            aria-hidden="true"></i></a>
                     <a href="https://www.linkedin.com/in/meagan-dietert/" target="_blank" rel="noopener noreferrer"
-                        class="social-link" aria-label="Follow on LinkedIn"><i class="fa-brands fa-linkedin"
-                            aria-hidden="true"></i></a>
+                        class="social-link" aria-label="Connect with Meagan on LinkedIn (opens in new tab)"><i
+                            class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
                     <a href="https://github.com/meagandietert" target="_blank" rel="noopener noreferrer"
-                        class="social-link" aria-label="Follow on GitHub"><i class="fa-brands fa-github"
-                            aria-hidden="true"></i></a>
+                        class="social-link" aria-label="View Meagan's GitHub profile (opens in new tab)"><i
+                            class="fa-brands fa-github" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="footer-col">
-                <h3 class="footer-col-title">Explore</h3>
+                <h2 class="footer-col-title">Explore</h2>
                 <nav class="footer-nav" aria-label="Footer navigation">
                     <a href="index.html" class="footer-link">Home</a>
                     <a href="about.html" class="footer-link">About</a>
@@ -124,7 +137,7 @@
                 </nav>
             </div>
             <div class="footer-col">
-                <img src="assets/photos/Signature.png" alt="Meagan Dietert signature" loading="lazy">
+                <img src="assets/photos/Signature.png" alt="Meagan Dietert's handwritten signature" loading="lazy">
             </div>
         </div>
         <div class="footer-bottom">
@@ -132,6 +145,13 @@
         </div>
     </footer>
 
+    <script>
+        const toggle = document.getElementById('ham-toggle');
+        const label = document.querySelector('.ham-btn');
+        toggle.addEventListener('change', () => {
+            label.setAttribute('aria-expanded', toggle.checked ? 'true' : 'false');
+        });
+    </script>
 
 </body>
 
