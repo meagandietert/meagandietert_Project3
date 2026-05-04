@@ -7,4 +7,4 @@ github: meagandietert
 
 Coded a multi-page creative web portfolio. Contains home, about, project, and contact section. All media is my own.
 
-Used Claude AI to debug and help with accessibility and section
+Used Claude AI to debug and help with accessibility and SEO
